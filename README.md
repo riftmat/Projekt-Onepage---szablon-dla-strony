@@ -1,4 +1,4 @@
-<h4 align="center"># Projekt-Onepage---szablon-dla-strony</h4>
+<h4 align="center">Projekt-Onepage---szablon-dla-strony</h4>
 
 ## Project Overview 🎉
   Projekt strony tytułowej, przygotowana do wypełnienia właściwą treścią i podłączenia do niej kolejnych stron.
