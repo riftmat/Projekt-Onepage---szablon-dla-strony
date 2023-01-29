@@ -25,15 +25,16 @@ body {
 }
 
 nav {
+    backdrop-filter: blur(3px);
     height: 70px;
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    background-color: rgb(10, 10, 10);
-    position: relative;
-    opacity: 90%;
+    background-color: rgba(10, 10, 10, 0.94);
+    position: fixed;
+    z-index: 1000;
     margin: 0px;
     padding: 0px;
     align-content: center;
@@ -92,6 +93,95 @@ h2 {
     opacity: 90%;
 }
 
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 105px;
+    margin-top: 80px;
+}
+
+.contact-title {
+    transition: 0.4s;
+    font-weight: 700;
+    font-size: min(max(1.5vw, 18px), 24px);
+    border: 2px solid rgb(155, 154, 154);
+    border-radius: 5vw;
+    padding: 1vh 20vw ;
+    user-select: none;
+} 
+.contact-title:hover {
+    background-color: rgb(10, 10, 10);
+    border: 2px solid rgb(10, 10, 10);
+    color: whitesmoke;
+}
+
+.contact-input {
+    display: none;
+}
+
+h3 {
+    font-size: min(max(1.5vw, 18px), 24px);
+    transition: 0.4s;
+    margin-bottom: 1px;
+    user-select: none;
+}
+
+input {
+    height: 20px;
+    width: 290px;
+    border: 2px solid rgb(155, 154, 154);
+    border-radius: 20px;
+    padding: 5px;
+}
+
+input:focus {
+    outline: none;
+    animation: bord 1.5s infinite;
+}
+
+textarea {
+    height: 50px;
+    width: 500px;
+    border: 2px solid rgb(155, 154, 154);
+    border-radius: 45px;
+    padding: 10px;
+    max-width: 700px;
+    max-height: 100px;
+    min-height: 30px;
+    min-width: 300px;
+}
+
+textarea:focus {
+    outline: none;
+    animation: bord 1.5s infinite;
+}
+
+.send {
+    margin-top: 1.5vh;
+    background: rgb(10, 10, 10);
+    color: whitesmoke;
+    border-radius: 10px;
+    padding: 8px 15px 8px 15px;
+    border: none;
+    font-size: 16px;
+    transition: 0.5s;
+}
+
+.sendAnim {
+    margin-top: 1.5vh;
+    background: rgb(10, 10, 10);
+    color: whitesmoke;
+    border-radius: 10px;
+    padding: 8px 15px 8px 15px;
+    border: none;
+    font-size: 16px;
+    animation: sendColor 0.5s;
+    transition: 0.5s;
+}
+
 footer {
     max-width: 900px;
     min-width: 200px;
@@ -124,9 +214,47 @@ li {
     scale: 1.5;
 }
 
-@keyframes hop {
-    25% {transform:translateX(5px) ;}
-    50% {transform:translateX(-5px) ;}
-    75% {transform:translateX(5px) ;}
+.ciastka {
+    position: fixed;
+    background: rgba(224, 224, 224, 0.61);
+    z-index: 99;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    backdrop-filter: blur(2.5px);
+} p {
+    text-align: center;
+} .closeBtn {
+    width: 30px;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.801);
+    position: fixed;
+    bottom: 20px;
+    right: 0px;
+    z-index: 100;
+    color: rgba(255, 0, 0, 0.74);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
 }
 
+@keyframes hop {
+    25% {transform:translateX(5px);}
+    50% {transform:translateX(-5px);}
+    75% {transform:translateX(5px);}
+}
+
+@keyframes sendColor {
+    0% {background: rgb(10, 10, 10); scale: 1; color: whitesmoke;}
+    50% {background: rgb(136, 136, 136); scale: 1.1; color: rgb(10, 10, 10);}
+    100% {background: rgb(10, 10, 10); scale: 1; color: whitesmoke;}
+}
+
+@keyframes bord {
+    0% {border: 2px solid rgb(20, 20, 20);}
+    50% {border: 2px solid rgb(155, 154, 154);}
+    100% {border: 2px solid rgb(20, 20, 20);}
+}

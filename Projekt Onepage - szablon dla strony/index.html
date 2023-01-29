@@ -8,6 +8,7 @@
         <meta name="keywords" content="Wpisz słowa kluczowe dla swoej strony (rób to po przecinku)">
         <meta name="author" content="Patryk Lachowicz">
         <meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
+        <script src="index.js" defer></script>
     </head>
     <body>
         <nav>
@@ -29,6 +30,20 @@
             <img src="jpg/biesek.jpg" alt="obraz psa">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
         </main>
+        <div class="contact">
+            <span class="contact-title" id="contact-title">Kliknij mnie</span>
+            <div class="contact-input" id="contact-input">
+                <div class="contact-e-div">
+                    <h3>Twój adres e-mail</h3>
+                    <input class="contact-email" type="text" id="user"/>
+                </div>
+                <div class="contact-t-div">
+                    <h3>Treść wiadomości</h3>
+                    <textarea class="contact-text" type="text" id="txtu"></textarea>
+                </div>
+                <button id="send" class="send">Wyślij wiadomość</button>
+            </div>
+        </div>
         <div class="stopa">
             <footer>
                 <p><b>Dane kontaktowe</b>:</p>
@@ -44,6 +59,10 @@
                 <a href="#"><img src="jpg/yt.png" alt="ikona odsyłacza do youtube"></a>
             </div>
             </footer>
+        </div>
+        <div class="ciastka" id="ciastka">
+            <p>Korzystamy z ciastek</p>
+            <div class="closeBtn" id="closeBtn">X</div>
         </div>    
     </body>
 </html>
